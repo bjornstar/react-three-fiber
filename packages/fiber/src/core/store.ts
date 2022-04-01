@@ -159,8 +159,6 @@ export type StoreProps = {
   onPointerMissed?: (event: MouseEvent) => void
 }
 
-const context = React.createContext<UseBoundStore<RootState>>(null!)
-
 const createStore = (
   invalidate: (state?: RootState) => void,
   advance: (timestamp: number, runGlobalEffects?: boolean, state?: RootState, frame?: THREE.XRFrame) => void,
@@ -367,4 +365,4 @@ const createStore = (
   return rootState
 }
 
-export { createStore, context }
+export { createStore }

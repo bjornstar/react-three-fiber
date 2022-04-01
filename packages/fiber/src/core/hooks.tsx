@@ -3,7 +3,8 @@ import * as React from 'react'
 import { StateSelector, EqualityChecker } from 'zustand'
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
 import { suspend, preload, clear } from 'suspend-react'
-import { context, RootState, RenderCallback } from './store'
+import { context } from './context'
+import { RootState, RenderCallback } from './store'
 import { buildGraph, ObjectMap, is } from './utils'
 
 export interface Loader<T> extends THREE.Loader {
